@@ -14,7 +14,7 @@ jupyter:
 ---
 
 # Name(s)
-**PUT YOUR FULL NAME(S) HERE**
+**Sydney Baroya**
 
 
 **Instructions:** This is an individual assignment, but you may discuss your code with your neighbors.
@@ -47,28 +47,54 @@ For the following exercises please read the Python appendix in the Marsland text
 
 ```python
 # YOUR SOLUTION HERE
-#a=1000
-print('this is my answer',a+1) 
+a = []
+for i in range(0,6):
+    new = []
+    for j in range(0,4):
+        new.append(2)
+    a.append(new)
+a=np.asarray(a)
+print(a) 
 ```
 
 ## Exercise 2
 
 ```python
 # YOUR SOLUTION HERE
-a=2000
+import numpy as np
+b = np.eye(6,4)
+b=map(lambda x: np.asarray((x*2)+1), b)
+b=np.asarray(list(b))
+print(b)
 ```
 
 ## Exercise 3
 
 ```python
 # YOUR SOLUTION HERE
+m = a*b
+print(m)
+# d = np.dot(a,b)
+# print(d)
 ```
+
+The dot product in the above problem does not work because the dimensions of the two matrices do not line up to perform a dot product on them.
+
 
 ## Exercise 4
 
 ```python
 # YOUR SOLUTION HERE
+a_trans = np.dot(a.transpose(), b)
+b_trans = np.dot(a, b.transpose())
+print("a transposed dot product: ", a_trans)
+print("a transposed size: ", np.size(a_trans))
+print("b transposed dot product: ", b_trans)
+print("b transposed size: ", np.size(b_trans))
 ```
+
+The results are different sizes because...
+
 
 ## Exercise 5
 
